@@ -1,53 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-body, * {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-.container {
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    background-color: gray;
-    text-align: center;
+body {
     display: flex;
-}
-.calculator {
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 90%;
-    margin: auto;
-    background-color: lightgray;
-    padding: 10px;
+    min-height: 100vh;
+    background-color: #091921;
+}
+.calculator {
     position: relative;
+    display: grid;
 }
-#screen {
-    width: 100%;
-    height: 40px;
-    background-color: red;
+.calculator .value {
+    grid-column: span 4;
+    height: 100px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
 }
-#operator {
-    position: absolute;
-    right: 15px;
-    top: 30%;
-    width: 90px;
-    height: auto;
+.calculator span {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background-color: #0c2835;
+    place-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.opr-keys {
-    width: 100%;
-    height: 30px;
-    margin: 5px;
-    display: block;
+.calculator span:active {
+    background-color: #74ff3b;
+    color: #111;
 }
-#numbers {
-    background-color: blue;
-    position: absolute;
-    left: 15px;
-    top:30%;
-    width: 60%;
-    height: auto;
+.calculator span.clear {
+    grid-column: span 2;
+    width: 120px;
+    background-color: #ff3077;
 }
-.number-keys {
-    width: 20%;
-    height: 30px;
-    margin: 5px;
+.calculator span.plus {
+    grid-row: span 2 ;
+    height: 120px;
+}
+.calculator span.equal {
+    background-color: #03b1ff;
 }
